@@ -29,11 +29,6 @@ function myFunc() {
 }
 
 
-
-
-setInterval(myFunc, 250);
-//clearInterval(myVar); //stop setInterval from running
-
 function detectCollision() {
   let burd = document.getElementById("burd").getBoundingClientRect();
   let house = document.getElementById("burdHouse").getBoundingClientRect();
@@ -52,7 +47,8 @@ function detectCollision() {
 
 
 
-
+    setInterval(myFunc, 250);
+    //clearInterval(myVar); //stop setInterval from running
 
 
 

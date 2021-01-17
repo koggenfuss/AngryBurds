@@ -37,6 +37,12 @@ button {
     padding:11px 10px 11px 10px;
 }
 
+#message {
+    text-align: center;
+    font-family: 
+    font-size: 50px;
+}
+
 #burd {
     position: relative;
     height: 25px;

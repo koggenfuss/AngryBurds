@@ -40,6 +40,9 @@ function detectCollision() {
         score++;
         document.getElementById("message").textContent = "Nice Shot!";
       }
+      else {
+        document.getElementById("message").textContent = "You missed!";
+      }
 
 
     }

@@ -12,7 +12,6 @@ console.log(`Inner width of window = ${innerWidth}`);
 console.log(`Inner height of window = ${innerHeight}`);
 
 
-
 function myFunc() {
   if (xSpeed*time < window.innerWidth) {// and no collision
     time++;

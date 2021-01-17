@@ -2,7 +2,7 @@
 let time = 0;
 let xSpeed = 60;
 let ySpeed = 120;
-
+let score = 0;
 
 
 let innerWidth = window.innerWidth;
@@ -12,8 +12,6 @@ console.log(`Inner width of window = ${innerWidth}`);
 console.log(`Inner height of window = ${innerHeight}`);
 
 
-console.log(document.getElementById("burd").getBoundingClientRect());
-console.log(document.getElementById("burdHouse").getBoundingClientRect());
 
 function myFunc() {
   if (xSpeed*time < window.innerWidth) {// and no collision
@@ -40,6 +38,8 @@ function detectCollision() {
       burd.left + house.width > house.left &&
       burd.top < house.top + house.height &&
       burd.height + burd.top > house.top) {
+        score++;
+        document.getElementById("message").textContent = "Nice Shot!";
       }
 
 

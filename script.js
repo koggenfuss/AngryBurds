@@ -12,9 +12,6 @@ console.log(`Inner width of window = ${innerWidth}`);
 console.log(`Inner height of window = ${innerHeight}`);
 
 
-console.log(document.getElementById("burd").getBoundingClientRect());
-console.log(document.getElementById("burdHouse").getBoundingClientRect());
-
 function myFunc() {
   if (xSpeed*time < window.innerWidth) {// and no collision
     time++;

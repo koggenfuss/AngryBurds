@@ -45,9 +45,6 @@ function detectCollision() {
       burd.left + house.width > house.left &&
       burd.top < house.top + house.height &&
       burd.height + burd.top > house.top) {
-        let collided =  0;
-        collided += 1;
-        console.log(collided);
       }
 
 

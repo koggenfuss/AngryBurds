@@ -1,11 +1,11 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    height: 90vh;
-    width: 98vw;
-    border: 1px solid black;
 }
 
+header {
+    text-align: center;
+  }
 
 footer {
     display: flex;
@@ -37,6 +37,11 @@ button {
     padding:11px 10px 11px 10px;
 }
 
+#border {
+    height: 80vh;
+    width: 98vw;
+    border: 1px solid black;
+}
 #message {
     text-align: center;
     font-family: 

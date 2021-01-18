@@ -1,18 +1,21 @@
 
 let time = 0;
-let xSpeed = 50;
-let ySpeed = 140;
+let xSpeed = 20;
+let ySpeed = 100;
 let score = 0;
-
+let collision = false;
 
 function myFunc() {
   
-  if ((xSpeed*time < window.innerWidth) && (!detectCollision())) {// and no collision???
+  if ((xSpeed*time < window.innerWidth) && (!detectCollision())) {  // bird is still flying and no collision
     time++;
     }
   else {
-    //console.log("you missed"); // not the place to put this statement because after hit, it drops into the else and says you missed :(  where to put this statement???????
-    time = 0; //there was a collision, add hit or miss to window, reset????
+    time = 0;
+      if (collision === "false") { // Nope, this doesn't work
+        document.getElementById("message").textContent = "You Missed";
+        console.log("You Missed");
+      }
     }
 
     document.getElementById("burd").style.left = xSpeed * time + "px"; // x-axis
@@ -42,17 +45,11 @@ function detectCollision() {
       burd.left + burd.width > house.left  &&
       burd.top < house.top + house.height  &&
       burd.top + burd.height > house.top){
-        let collision = true;
+        collision = true;
         score++;
         document.getElementById("message").textContent = "Nice Shot!";
         console.log("nice shot!");
       }
-      // else {
-      //   // document.getElementById("message").textContent = "You missed!";
-       // console.log("you missed");
-      // }
-
-
     }
 
     setInterval(myFunc, 250);
